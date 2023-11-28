@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>SkyBadminton</title>
+    <style>
+        *{
+            cursor: url('mouse.png'), pointer;
+        }  
+        /* .play-button:hover {
+            cursor: url("grab.png"), grab;
+        } */
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("background.png");
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .play-button {
+            cursor: url("mouse.png"), auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .play-button img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+
+        .play-button img:hover {
+            cursor: url("grab.png"), grab;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .footer img {
+            width: 100%;
+            height: auto;
+        }
+
+        .clouds {
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            right: -200px;
+            bottom: -200px;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .cloud {
+            position: absolute;
+            top: calc(10%);
+            left: 0;
+            opacity: 0;
+            animation: cloudAnimation linear infinite;
+        }
+
+        .cloud:nth-child(1) {
+            top: calc(20%);
+            left: -200px;
+            animation-duration: 15s;
+            animation-delay: 1s;
+            z-index: 5;
+        }
+
+        .cloud:nth-child(2) {
+            top: calc(30%);
+            left: -400px;
+            animation-duration: 18s;
+            animation-delay: 2s;
+            z-index: 4;
+        }
+
+        .cloud:nth-child(3) {
+            top: calc(40%);
+            left: -600px;
+            animation-duration: 20s;
+            animation-delay: 3s;
+            z-index: 3;
+        }
+
+        .cloud:nth-child(4) {
+            top: calc(60%);
+            left: -800px;
+            animation-duration: 22s;
+            animation-delay: 4s;
+            z-index: 2;
+        }
+
+        .cloud:nth-child(5) {
+            top: calc(70%);
+            left: -1000px;
+            animation-duration: 24s;
+            animation-delay: 5s;
+            z-index: 1;
+        }
+
+        @keyframes cloudAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(-200px);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(100vw);
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                height: auto;
+                padding: 20px;
+            }
+
+            .play-button img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="download.html" class="play-button">
+            <img src="play.png" alt="Play Button">
+        </a>
+    </div>
+    <div class="clouds">
+        <img src="cloud1.png" alt="Cloud" class="cloud" style="animation-duration: 70s; animation-delay: 1s;">
+        <img src="cloud1.png" alt="Cloud" class="cloud" style="animation-duration: 70s; animation-delay: 30s;">
+        <img src="cloud1.png" alt="Cloud" class="cloud" style="animation-duration: 90s; animation-delay: 70s;">
+        <img src="cloud2.png" alt="Cloud" class="cloud" style="animation-duration: 100s; animation-delay: 2s;">
+        <img src="cloud2.png" alt="Cloud" class="cloud" style="animation-duration: 100s; animation-delay: 40s;">
+        <img src="cloud2.png" alt="Cloud" class="cloud" style="animation-duration: 120s; animation-delay: 35s;">
+        <img src="cloud2.png" alt="Cloud" class="cloud" style="animation-duration: 120s; animation-delay: 60s;">
+        <img src="cloud3.png" alt="Cloud" class="cloud" style="animation-duration: 150s; animation-delay: 4s;">
+        <img src="cloud3.png" alt="Cloud" class="cloud" style="animation-duration: 150s; animation-delay: 75s;">
+        <img src="cloud4.png" alt="Cloud" class="cloud" style="animation-duration: 200s; animation-delay: 5s;">
+        <img src="cloud4.png" alt="Cloud" class="cloud" style="animation-duration: 200s; animation-delay: 100s;">
+        <img src="cloud5.png" alt="Cloud" class="cloud" style="animation-duration: 300s; animation-delay: 1s;">
+        <img src="cloud5.png" alt="Cloud" class="cloud" style="animation-duration: 300s; animation-delay: 60s;">
+    </div>
+    <div class="footer">
+        <!-- <img src="marina.gif" alt="Footer" style="width: 500px;"> -->
+        <img src="footer.gif" alt="Footer">
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Play Button Page</title>
+    <style>
+        *{
+            cursor: url('mouse.png'), pointer;
+        }  
+        /* .play-button:hover {
+            cursor: url("grab.png"), grab;
+        } */
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("background.png");
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .play-button {
+            cursor: url("mouse.png"), auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .play-button img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+
+        .play-button img:hover {
+            cursor: url("grab.png"), grab;
+            
+            transform: scale(1.1);
+        }
+
+        .footer {
+            position: absolute;
+            padding: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+
+        .footer img {
+            width: 100%;
+            height: auto;
+        }
+
+        .clouds {
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            right: -200px;
+            bottom: -200px;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .cloud {
+            position: absolute;
+            top: calc(10% - 100px);
+            left: 0;
+            opacity: 0;
+            animation: cloudAnimation linear infinite;
+        }
+
+        .cloud:nth-child(2) {
+            top: calc(20% - 100px);
+            left: -200px;
+            animation-duration: 15s;
+            animation-delay: 1s;
+        }
+
+        .cloud:nth-child(3) {
+            top: calc(30% - 100px);
+            left: -400px;
+            animation-duration: 18s;
+            animation-delay: 2s;
+        }
+
+        .cloud:nth-child(4) {
+            top: calc(10% - 100px);
+            left: -600px;
+            animation-duration: 12s;
+            animation-delay: 3s;
+        }
+
+        .cloud:nth-child(5) {
+            top: calc(50% - 100px);
+            left: -600px;
+            animation-duration: 12s;
+            animation-delay: 3s;
+        }
+
+        @keyframes cloudAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(-200px);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(100vw);
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                height: auto;
+                padding: 20px;
+            }
+
+            .play-button img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="download.html" class="play-button">
+            <img src="play.png" alt="Play Button">
+        </a>
+    </div>
+    <div class="clouds">
+        <img src="cloud1.png" alt="Cloud" class="cloud" style="animation-duration: 90s; animation-delay: 1s;">
+        <img src="cloud2.png" alt="Cloud" class="cloud" style="animation-duration: 150s; animation-delay: 2s;">
+        <img src="cloud3.png" alt="Cloud" class="cloud" style="animation-duration: 50s; animation-delay: 3s;">
+        <img src="cloud4.png" alt="Cloud" class="cloud" style="animation-duration: 60s; animation-delay: 4s;">
+        <img src="cloud5.png" alt="Cloud" class="cloud" style="animation-duration: 120s; animation-delay: 5s;">
+        <img src="cloud3.png" alt="Cloud" class="cloud" style="animation-duration: 70s; animation-delay: 6s;">
+    </div>
+    <div class="footer">
+        <img src="footer.png" alt="Footer">
+    </div>
+</body>
+</html> -->
+
+<!-- <img src="cloud1.png" alt="Cloud" class="cloud" style="animation-duration: 90s;">
+<img src="cloud2.png" alt="Cloud" class="cloud" style="animation-duration: 150s;">
+<img src="cloud3.png" alt="Cloud" class="cloud" style="animation-duration: 50s;">
+<img src="cloud4.png" alt="Cloud" class="cloud" style="animation-duration: 60s;">
+<img src="cloud5.png" alt="Cloud" class="cloud" style="animation-duration: 120s;">  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Play Button Page</title>
+    <style>
+        body {
+            background-image: url("background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .play-button {
+            cursor: pointer;
+        }
+
+        .play-button img {
+            /* width: 200px; */
+            /* height: 200px; */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .play-button img:hover {
+            transform: scale(1.1);
+        }
+
+        .clouds {
+            position: relative;
+            z-index: -1;
+        }
+
+        .cloud {
+            position: absolute;
+            top: 0;
+            left: -200px;
+            animation: cloudAnimation linear infinite;
+        }
+
+        @keyframes cloudAnimation {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(2000px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://example.com" class="play-button">
+            <img src="play.png" alt="Play Button">
+        </a>
+    </div>
+    <div class="clouds">
+        <img src="wave.svg" alt="Cloud" class="cloud" style="animation-duration: 20s;">
+        <img src="wave.svg" alt="Cloud" class="cloud" style="animation-duration: 15s;">
+        <img src="wave.svg" alt="Cloud" class="cloud" style="animation-duration: 18s;">
+        <img src="wave.svg" alt="Cloud" class="cloud" style="animation-duration: 12s;">
+    </div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+<!-- <!doctype html>
+<html lang="ru">
+    <head>
+    </head>
+
+    <body>
+
+    <div id="body">
+        <div id="CenterZone">
+            <div id="CenterText" src="play.png"> 
+            </div>
+        </div>
+    </div>
+    </body>
+    <footer>
+    </footer>
+</html>
+ -->
+
